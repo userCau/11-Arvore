@@ -190,11 +190,11 @@ void buscarElementoArvore(NO* no, int valor)
 		return;
 	}
 
-	if (no->valor > valor) {
+	if (valor > no->valor) {
 		buscarElementoArvore(no->dir, valor);
 
 ;	}
-	else {
+	if (valor < no->valor) {
 		buscarElementoArvore(no->esq, valor);
 	}
 
